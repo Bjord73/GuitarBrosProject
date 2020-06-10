@@ -7,4 +7,8 @@ public interface AcousticInterface {
     String getSoundHole();
 
     String getSaddle();
+
+    long getUpcCount();
+
+    long getSerialUPC();
 }

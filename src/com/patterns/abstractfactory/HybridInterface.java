@@ -1,6 +1,7 @@
 package com.patterns.abstractfactory;
 
 public interface HybridInterface {
+    String getFrameAll();
     String getHollowBody();
     String getElectricPickUps();
     String getYCable();

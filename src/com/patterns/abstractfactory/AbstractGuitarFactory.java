@@ -1,7 +1,25 @@
 package com.patterns.abstractfactory;
 
+import Base.AbstractAcoustic;
+import Base.AbstractElectric;
+import Base.AbstractHybrid;
+
 public abstract class AbstractGuitarFactory {
-    public abstract void createFrame(AcousticInterface acoustic);
-    public abstract void createFrame(ElectricInterface electric);
-    public abstract void createFrame(HybridInterface hybrid);
+    protected long upc;
+    private long serialUPC;
+
+    public abstract long getPrefix();
+
+    public long getSerialUPC() {return serialUPC;}
+
+    public void setSerialUPC(long serial) { this.serialUPC = serial;}
+
+
+    public long getUpcCount() { return upc; }
+
+
+    public abstract void createFrame(AbstractAcoustic acoustic);
+    public abstract void createFrame(AbstractElectric electric);
+    public abstract void createFrame(AbstractHybrid hybrid);
+
 }
